@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@300;400;500;600&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-sky: #4AB3E8;
+  --color-sky-deep: #1A7EBD;
+  --color-sky-light: #C8E9F7;
+  --color-sky-pale: #EAF6FD;
+  --color-gold: #D4A843;
+  --color-gold-light: #F0CA6E;
+  --color-gold-pale: #FBF0D3;
+  --color-text-dark: #0F2A3D;
+  --color-text-mid: #3A6478;
+  --color-text-light: #7BAFC8;
+  --color-border: #C8E0EE;
+}
+
+@layer base {
+  body {
+    @apply bg-[#F6FBFE] text-text-dark font-sans;
+  }
+}
+
+@keyframes shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+.animate-shimmer {
+  background: linear-gradient(90deg, #e8f4fb 25%, #d0eaf8 50%, #e8f4fb 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+}
+
